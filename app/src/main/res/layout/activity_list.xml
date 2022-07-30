@@ -6,12 +6,6 @@
     android:layout_gravity="start"
     android:id="@+id/drawerView"
     android:background="#FFFFFF">
-    <fragment
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="top|center_horizontal"></fragment>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -48,4 +42,40 @@
             android:layout_marginRight="20dp"
             android:src="@drawable/ic_launcher_background" />
     </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <!--다이어리-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/diary_text"
+                android:layout_width="121dp"
+                android:layout_height="42dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical|left"
+                android:text="내 다이어리"
+                android:textColor="#3C3C3C"
+                android:textSize="18dp"></TextView>
+
+            <ImageButton
+                android:id="@+id/my_diary_btn"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="75dp"
+                android:layout_toRightOf="@id/diary_text"
+                android:src="@drawable/ic_launcher_background" />
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

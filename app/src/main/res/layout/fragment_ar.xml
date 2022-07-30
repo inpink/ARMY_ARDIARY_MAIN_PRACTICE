@@ -5,11 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".ArFragment">
 
-    <!-- nTODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_launcher_background" />
 
 </FrameLayout>
