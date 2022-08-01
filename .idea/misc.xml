@@ -4,17 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.183" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/drawable-v24/middle_round_button.xml" value="0.1765" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/drawable-v24/white_round_button.xml" value="0.159" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/drawable/circle_button.xml" value="0.1" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/drawable/gray_round_button.xml" value="0.16" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/drawable/ic_launcher_background.xml" value="0.183" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/drawable/more_round_button.xml" value="0.121" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/drawable/round_button.xml" value="0.202" />
-        <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/layout/activity_list.xml" value="0.22" />
-        <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/layout/activity_list.xml" value="0.25" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/layout/activity_map.xml" value="0.2520833333333333" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/layout/fragment_ar.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/layout/fragment_list_default.xml" value="0.25" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/layout/fragment_map2.xml" value="0.17447916666666666" />
         <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/layout/fragment_maps.xml" value="0.2" />
-        <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/layout/navi_header.xml" value="0.25" />
+        <entry key="..\:/Users/82109/AndroidStudioProjects/MainUI/app/src/main/res/layout/navi_header.xml" value="0.5" />
       </map>
     </option>
   </component>

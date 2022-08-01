@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="start"
-    android:id="@+id/drawerView"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:orientation="vertical"
 
+    >
+
+    <!--상단 바 고정됨-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@drawable/more_round_button"
-        android:orientation="horizontal">
+        android:layout_height="57dp"
+        android:background="@drawable/middle_round_button"
+        android:orientation="horizontal"
+        android:elevation="15dp"
+
+        >
 
         <ImageButton
             android:id="@+id/back_btn"
@@ -19,19 +26,18 @@
             android:layout_height="25dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:layout_marginLeft="23dp"
+            android:background="@drawable/xxxx" />
 
         <TextView
             android:id="@+id/diarylist_text"
             android:layout_width="150dp"
             android:layout_height="33dp"
             android:layout_centerInParent="true"
-
             android:gravity="center_vertical|center_horizontal"
             android:text="Diary Lists"
             android:textColor="#FFFFFF"
-            android:textSize="23dp"></TextView>
+            android:textSize="27dp"></TextView>
 
         <ImageButton
             android:id="@+id/menu_btn"
@@ -43,39 +49,29 @@
             android:src="@drawable/ic_launcher_background" />
     </RelativeLayout>
 
+    <!-- 스크롤 뷰-->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-        <!--다이어리-->
+        android:layout_height="wrap_content"
+        >
+
+        <!--세로로 전체 레이아웃-->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="#FFFFFF"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/diary_text"
-                android:layout_width="121dp"
-                android:layout_height="42dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical|left"
-                android:text="내 다이어리"
-                android:textColor="#3C3C3C"
-                android:textSize="18dp"></TextView>
+            <fragment
+                android:id="@+id/list"
+                android:name="com.example.mainui.ListDefaultFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/fragment_list_default" />
 
-            <ImageButton
-                android:id="@+id/my_diary_btn"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="75dp"
-                android:layout_toRightOf="@id/diary_text"
-                android:src="@drawable/ic_launcher_background" />
 
         </RelativeLayout>
+
+
+
+
     </ScrollView>
-</RelativeLayout>
+</LinearLayout>
