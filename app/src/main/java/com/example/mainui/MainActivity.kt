@@ -9,6 +9,8 @@ import android.widget.ImageView
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.navi_header.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         var my_btn : ImageButton = findViewById<ImageButton>(R.id.my_diary_btn)
         var map_btn : ImageView = findViewById<ImageView>(R.id.Button11)
+
 
         my_btn.setOnClickListener {
             val intent = Intent(this, ListActivity::class.java)
@@ -31,5 +34,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+        camera_btn.setOnClickListener{
+            val intent = Intent(this, CameraActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }

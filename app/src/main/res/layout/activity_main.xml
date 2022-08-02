@@ -10,6 +10,7 @@
     android:id="@+id/drawer_layout"
     tools:context=".MainActivity">
 
+
     <!-- 안에 자유롭게 꾸며보세요 ㅎㅎ -->
     <FrameLayout
         android:id="@+id/bg"
@@ -17,7 +18,6 @@
         android:layout_height="155dp"
         android:gravity="center"
         >
-
 
         <fragment
             android:id="@+id/list"

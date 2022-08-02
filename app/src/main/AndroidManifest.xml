@@ -2,17 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mainui">
-
-    <!--카메라 권한 요청-->
-    <uses-permission android:name="android.permission.CAMERA"/>
-
-    <!--네트워크 권한 요청-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
-    <!--위치 권한 요청-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
+    <!-- 카메라 권한 요청 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 네트워크 권한 요청 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 위치 권한 요청 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 저장 공간 권한 요청(사진 저장하고 불러오기) -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -24,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MainUI"
         tools:targetApi="31">
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
         <activity
             android:name=".MapActivity"
             android:exported="false" />
@@ -54,6 +53,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.mycamera.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- authorities="현재 패키지명.FileProvider" 이 앱의 파일 프로바이더에 권한 부여 -->
+            <!-- grantUriPermissions=사진 가져올 때 주소 필요해서 true -->
+
+
+            <!-- 찍은 사진 저장될 주소 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/external" />
+        </provider>
     </application>
 
 </manifest>
