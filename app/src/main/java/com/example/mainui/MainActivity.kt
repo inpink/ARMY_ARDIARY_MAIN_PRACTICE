@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.content.Intent
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.ImageView
 import com.google.android.gms.maps.*
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         map_btn.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
             startActivity(intent)
+            Log.d("test","맵 버튼 클릭")
 
         }
         camera_btn.setOnClickListener{
