@@ -66,11 +66,19 @@ class ListActivity : AppCompatActivity(){
         btnSwitch.setImageDrawable(getDrawable(R.drawable.ic_launcher_foreground))
         //frag2_imageview_trmain.setImageDrawable(getDrawable(R.drawable.ic_launcher_foreground))
 
+
+        /* fragment삭제하기
+        supportFragmentManager.beginTransaction()
+            .remove(ListDefaultFragment())
+            .addToBackStack(ListDefaultFragment().javaClass.simpleName)
+            .commit()*/
+
         //supportFragmentManager.beginTransaction() 이용해서 frameLayout이라는 것을 ListImageFragment() class로 변경
         supportFragmentManager.beginTransaction()
             .replace(R.id.frameLayout, ListImageFragment())
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
             .commit()
     }
+
 
 }
