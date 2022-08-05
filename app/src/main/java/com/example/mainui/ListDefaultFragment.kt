@@ -31,7 +31,7 @@ class ListDefaultFragment : Fragment() {
         val binding = FragmentListDefaultBinding.inflate(inflater, container, false)
 
         // 2. 바인딩으로 TextView 등에 접근
-        binding.myTextView.text = "바인딩이 잘 되었어요!!"
+        binding.DateAndDay.text = "창덕궁"
 
         // 3. 프래그먼트 레이아웃 뷰 반환
         return binding.root

@@ -13,7 +13,7 @@
     <!--상단 바 고정됨-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="57dp"
+        android:layout_height="50dp"
         android:background="@drawable/middle_round_button"
         android:orientation="horizontal"
         android:elevation="15dp"

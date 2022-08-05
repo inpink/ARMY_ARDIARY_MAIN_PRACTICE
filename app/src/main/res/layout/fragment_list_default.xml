@@ -69,7 +69,7 @@
             <!--회색한 칸-->
             <RelativeLayout
                 android:layout_width="350dp"
-                android:layout_height="1200dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/update_time"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="7dp"
@@ -78,18 +78,22 @@
 
                 <!--흰 색 한 칸-->
                 <RelativeLayout
+                    android:id="@+id/firstWhite"
                     android:layout_width="410dp"
-                    android:layout_height="80dp"
+                    android:layout_height="70dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
-
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/white_round_button">
 
 
                     <ImageView
+                        android:id="@+id/locImg"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/ic_launcher_background">
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gray_round_button">
 
 
                     </ImageView>
@@ -97,12 +101,44 @@
                     <TextView
                         android:id="@+id/myTextView"
                         android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="test입니동"
-                        >
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/locImg"
+                        android:text="창덕궁에 다녀오다."
+                        android:textColor="@color/black">
 
                     </TextView>
+
+                    <TextView
+                        android:id="@+id/myTextView1"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myTextView"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/locImg"
+                        android:text="Tilig måns. Falant egons.
+                        On decikara. Ner...."
+                        android:textColor="@color/black"
+                        android:textSize="11dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/disclose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="전체 공개"
+                        android:textColor="#117308"
+                        android:textSize="8dp"
+                        >
+                    </TextView>
+
+
                 </RelativeLayout>
+
+
 
             </RelativeLayout>
 
