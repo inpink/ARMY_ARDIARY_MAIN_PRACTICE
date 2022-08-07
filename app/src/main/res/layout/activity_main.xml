@@ -81,10 +81,11 @@
 
 
 
+
     </FrameLayout>
 
-    <include layout="@layout/navi_header"/>
 
+    <include layout="@layout/navi_header"/>
 
 
 
