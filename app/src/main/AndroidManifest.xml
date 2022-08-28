@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mainui">
+
     <!-- 카메라 권한 요청 -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- 네트워크 권한 요청 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 위치 권한 요청 -->
@@ -9,7 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 저장 공간 권한 요청(사진 저장하고 불러오기) -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -20,9 +21,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MainUI"
-        tools:targetApi="31"
         android:usesCleartextTraffic="true"
-        >
+        tools:targetApi="31">
+        <service
+            android:name=".INetworkService"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <activity
             android:name=".CameraActivity"
             android:exported="false" />
@@ -75,10 +80,7 @@
 
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false"/>
-
-
-
+            android:required="false" />
     </application>
 
 </manifest>

@@ -19,6 +19,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.navi_header.*
 import org.json.JSONArray
 import org.json.JSONObject
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         var my_btn : ImageButton = findViewById<ImageButton>(R.id.my_diary_btn)
         var map_btn : ImageView = findViewById<ImageView>(R.id.Button11)
 
+        val retrofit = Retrofit.Builder().baseUrl(" http://3.39.158.43:8088/")
+            .addConverterFactory(GsonConverterFactory.create()).build();
+        val service = retrofit.create(INetworkService::class.java);
 
        /* // 문자열 요청
        val url: String = "http://3.39.158.43:8088/"
@@ -47,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             })
         val queue = Volley.newRequestQueue(this)
         queue.add(stringRequest)
-*/
+
 
         //json 배열 요청
         val url: String = "http://3.39.158.43:8088/"
@@ -71,7 +76,7 @@ class MainActivity : AppCompatActivity() {
 
         val queue = Volley.newRequestQueue(this)
         queue.add(jsonArrayRequest)
-
+*/
 
 
         my_btn.setOnClickListener {
